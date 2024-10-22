@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        padding: 1rem 0;
+        line-height: 1.6;
+        font-family: sans-serif;
+        background-color: red;
+      }
+
+      .pages-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        width: 210mm;
+        margin: 0 auto;
+      }
+
+      .page-config {
+        position: relative;
+        overflow: hidden;
+        height: 297mm;
+        padding: 2.5rem;
+        background-color: white;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+
+      .card {
+        background-color: #f8f8f8;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+        gap: 0;
+      }
+
+      @media print {
+        html,
+        body {
+          padding: 0;
+          margin: 0;
+          width: 210mm;
+          height: 297mm;
+        }
+
+        .pages-section {
+          gap: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pages-section"></section>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
